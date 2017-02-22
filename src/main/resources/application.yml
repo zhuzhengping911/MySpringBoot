@@ -1,0 +1,50 @@
+zzp:
+  title: 朱正平是个大帅哥
+  description: 哈哈哈，这是事实
+#log输出日志
+logging:
+  path: /user/local/log
+  level:
+    com:
+      favorites: debug
+    org:
+      springframework:
+        web: info
+      hibernate: error
+#数据库连接
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/blog
+    username: root
+    password: 123
+    driver-class-name: com.mysql.jdbc.Driver
+#hibernate映射配置
+  jpa:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+#redis配置
+  redis:
+#  数据库索引
+    database: 0
+#    服务器地址
+    host: 127.0.0.1
+#    服务器连接端口
+    port: 6379
+#    链接密码
+    password:
+#    链接池
+    pool:
+#    最大连接数（负值表示没有限制）
+      max-active: 8
+#      最大阻塞等待时间（负值表示没有限制）
+      max-wait: 1
+#      最大空闲链接
+      max-idle: 8
+#      最小空闲链接
+      min-idle: 0
+#    链接超时时间（毫秒）
+    timeout: 0
