@@ -73,6 +73,6 @@ public class BaseQueryTest {
         for (User u : aa){
             System.out.println(u.getUserName());
         }
-//        userRepository.modifyByIdAndUserId("qq3",(long) 15);
+        userRepository.modifyByIdAndUserId("qq3",(long) 15);
     }
 }
