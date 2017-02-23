@@ -2,6 +2,8 @@ package com.example;
 
 import com.DemoApplication;
 import com.compont.User;
+import com.dao.CityRepository;
+import com.dao.HotelSummary;
 import com.dao.UserRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,6 +26,9 @@ public class BaseQueryTest {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private CityRepository cityRepository;
 
     @Test
     public void test(){
@@ -74,5 +79,14 @@ public class BaseQueryTest {
             System.out.println(u.getUserName());
         }
         userRepository.modifyByIdAndUserId("qq3",(long) 15);
+    }
+
+    @Test
+    public void testHotel(){
+//        cityRepository.save(new City("shanghai","021"));
+        Page<HotelSummary> hotels = cityRepository.findByCity((long) 1,new PageRequest(0,10, Sort.Direction.ASC,"hotelName"));
+        for (HotelSummary hotel : hotels){
+            System.out.println(hotel.getName());
+        }
     }
 }
