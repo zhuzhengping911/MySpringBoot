@@ -12,6 +12,8 @@ logging:
         web: info
       hibernate: error
 #数据库连接
+#mybatis:
+#  type-aliases-package: com.compont
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/blog
@@ -48,3 +50,10 @@ spring:
       min-idle: 0
 #    链接超时时间（毫秒）
     timeout: 0
+  application:
+    name: MySpringBoot
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest

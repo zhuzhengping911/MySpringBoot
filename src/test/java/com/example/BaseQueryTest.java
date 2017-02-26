@@ -3,7 +3,7 @@ package com.example;
 import com.DemoApplication;
 import com.compont.User;
 import com.dao.CityRepository;
-import com.dao.HotelSummary;
+import com.compont.HotelSummary;
 import com.dao.UserRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;

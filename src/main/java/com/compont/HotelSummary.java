@@ -1,4 +1,4 @@
-package com.dao;
+package com.compont;
 
 /**
  * Created by zhuzhengping on 2017/2/23.

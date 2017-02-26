@@ -1,6 +1,7 @@
 package com.dao;
 
 import com.compont.City;
+import com.compont.HotelSummary;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
