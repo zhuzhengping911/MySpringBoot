@@ -1,4 +1,4 @@
-package com.common;
+package com.common.mq;
 
 import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
@@ -17,5 +17,10 @@ public class RabbitConfig {
     @Bean
     public Queue queue(){
         return new Queue("hello");
+    }
+
+    @Bean
+    public Queue objectQueue(){
+        return new Queue("object");
     }
 }

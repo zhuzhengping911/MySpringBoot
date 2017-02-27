@@ -1,4 +1,4 @@
-package com.common;
+package com.common.mq.hello;
 
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,4 +21,12 @@ public class HelloSender {
         System.out.println("sender:" + context);
         this.rabbitTemplate.convertAndSend("hello",context);
     }
+
+    public void send(int i) {
+        String context = "hello,ZZP" + i;
+        System.out.println("sender:" + context);
+        this.rabbitTemplate.convertAndSend("hello",context);
+    }
+
+
 }
