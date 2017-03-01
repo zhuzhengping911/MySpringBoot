@@ -40,6 +40,8 @@ public class RabbitMqHelloTest {
 
     /**
      * 适用对象，再重写了tostring方法后，接受可直接接收
+     * 建议不使用object这种可能是关键字的queque
+     *
      */
     @Test
     public void objectReceiver(){

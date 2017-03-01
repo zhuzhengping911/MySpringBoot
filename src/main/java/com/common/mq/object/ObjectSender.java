@@ -16,6 +16,6 @@ public class ObjectSender {
 
     public void send(User user){
         System.out.println("sender object:" + user.toString());
-        this.rabbitTemplate.convertAndSend("object",user);
+        this.rabbitTemplate.convertAndSend("user",user);
     }
 }

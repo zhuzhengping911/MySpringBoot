@@ -1,6 +1,5 @@
-package com.common.mq.object;
+package com.common.mq.fanout;
 
-import com.compont.User;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
@@ -9,11 +8,12 @@ import org.springframework.stereotype.Component;
  * Created by zhuzhengping on 2017/3/1.
  */
 @Component
-@RabbitListener(queues = "user")
-public class ReceiverObject {
+@RabbitListener(queues = "fanout.B")
+public class FanoutReceiverB {
 
     @RabbitHandler
-    public void process(User user){
-        System.out.println("object user:" + user);
+    public void process(String msg){
+        System.out.println("fanout Receiver BBBB:" + msg);
     }
+
 }
