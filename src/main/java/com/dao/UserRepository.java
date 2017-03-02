@@ -20,7 +20,7 @@ public interface UserRepository extends JpaRepository<User,Long> {
 
     User findByUserNameOrEmail(String username,String email);
 
-    Long deleteById(Long id);
+//    Long deleteById(Long id);
 
     Long countByUserName(String userName);
 
