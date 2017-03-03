@@ -2,6 +2,8 @@ package com.compont;
 
 /**
  * Created by zhuzhengping on 2017/2/23.
+ *
+ * 使用interface将返回的数据封装成一个实体类
  */
 public interface HotelSummary {
 
