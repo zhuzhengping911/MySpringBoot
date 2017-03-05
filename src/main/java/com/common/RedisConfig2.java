@@ -23,6 +23,7 @@ import java.lang.reflect.Method;
 
 /**
  * Created by zhuzhengping on 2017/2/19.
+ * redis配置
  */
 @Configuration
 @EnableCaching

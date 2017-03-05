@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * 队列配置
+ * 基础配置，最基本的消息传输
  */
 @Configuration
 public class RabbitConfig {

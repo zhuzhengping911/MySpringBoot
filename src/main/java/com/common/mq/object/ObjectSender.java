@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * Created by zhuzhengping on 2017/2/28.
+ * 重写tostring方法后，可直接传输对象，并且在消费端可直接拿到对象的tostring后的结果
  */
 @Component
 public class ObjectSender {

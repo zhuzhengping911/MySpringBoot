@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * Created by zhuzhengping on 2017/3/1.
+ * 这里使用的channel在分配的时候没有生效
  */
 @Component
 public class FanoutSender {

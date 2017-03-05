@@ -9,6 +9,7 @@ import java.util.Date;
 /**
  * Created by zhuzhengping on 2017/2/26.
  * 发送者
+ * 依靠hello字段将消息平均分发给消费者
  */
 @Component
 public class HelloSender {

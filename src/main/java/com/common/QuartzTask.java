@@ -8,6 +8,7 @@ import java.util.Date;
 
 /**
  * Created by zhuzhengping on 2017/3/2.
+ * 定时任务，两种写法都可
  */
 @Component
 public class QuartzTask {
