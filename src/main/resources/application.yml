@@ -16,10 +16,17 @@ logging:
 #  type-aliases-package: com.compont
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/blog
-    username: root
-    password: 123
-    driver-class-name: com.mysql.jdbc.Driver
+    one:
+      url: jdbc:mysql://localhost:3306/blog
+      username: root
+      password: 123
+      driver-class-name: com.mysql.jdbc.Driver
+#数据库连接2
+    two:
+      url: jdbc:mysql://localhost:3306/dbgirl
+      username: root
+      password: 123
+      driver-class-name: com.mysql.jdbc.Driver
 #hibernate映射配置
   jpa:
     properties:
