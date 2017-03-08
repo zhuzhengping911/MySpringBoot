@@ -10,6 +10,7 @@ import javax.annotation.Resource;
 
 /**
  * Created by zhuzhengping on 2017/3/8.
+ * 多数据源配置测试
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest

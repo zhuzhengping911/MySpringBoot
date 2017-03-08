@@ -13,6 +13,7 @@ import javax.sql.DataSource;
 
 /**
  * Created by zhuzhengping on 2017/3/8.
+ * 多数据源配置
  */
 @Configuration
 @EnableTransactionManagement

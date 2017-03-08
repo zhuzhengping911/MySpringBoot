@@ -11,6 +11,7 @@ import java.util.List;
 
 /**
  * Created by zhuzhengping on 2017/3/7.
+ * jdbc链接数据库
  */
 @Repository
 public class AuthorDaoImpl implements AuthorDao_jdbc {

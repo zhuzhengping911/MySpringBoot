@@ -6,6 +6,7 @@ import java.util.List;
 
 /**
  * Created by zhuzhengping on 2017/3/7.
+ * jdbc链接数据库dao层
  */
 public interface AuthorDao_jdbc {
 
