@@ -9,6 +9,9 @@ import java.util.List;
 
 /**
  * Created by zhuzhengping on 2017/3/10.
+ * mybatis通过注解实现
+ * 使用xml配置的方式与springmvc一致，这里不多赘述
+ *
  */
 @Component
 @Mapper

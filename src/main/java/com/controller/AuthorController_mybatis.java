@@ -13,6 +13,7 @@ import java.util.Map;
 
 /**
  * Created by zhuzhengping on 2017/3/10.
+ * 使用mybatis时，要注明扫描的包
  */
 @RestController
 @RequestMapping(value = "/data/mybatis/author")
