@@ -31,7 +31,7 @@ public class RedisTest2 {
 
     @Test
     public void test(){
-        User user = new User("zzp","123","zhu_zhengping@hotmail.com","king","2010");
+        User user = new User("zzp","123","zhu_zhengping@hotmail.com","king","2011");
         this.redisBaseDao.addValue("zzp",user.toString());
         System.out.println(this.redisBaseDao.getValue("zzp"));
 
