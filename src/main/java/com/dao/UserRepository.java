@@ -13,6 +13,8 @@ import java.util.List;
 
 /**
  * Created by zhuzhengping on 2017/2/14.
+ * jpa 的实现方式有良知，一种是继承jparepository的方法
+ * 还有一种是调用entitymanage的方法
  */
 public interface UserRepository extends JpaRepository<User,Long> {
 
