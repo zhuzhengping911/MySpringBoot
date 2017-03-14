@@ -2,7 +2,7 @@
 ## study spring boot学习springboot
 - 注解的使用
 - jpa整合
-- 使用redis，redis cache
+- 使用redis，redis cache，conCurrenMapManger
 - mybaits以及多数据源配置
 - 消息rabbitMQ
 - 定时任务
