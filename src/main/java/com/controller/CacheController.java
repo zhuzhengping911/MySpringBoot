@@ -17,11 +17,21 @@ public class CacheController {
     private CacheService cacheService;
 
     @RequestMapping(value = "",method = RequestMethod.GET)
-    public String getByCache(){
+    public String getByCache() {
         long startTme = System.currentTimeMillis();
         long timeTme = this.cacheService.getByCache();
         long endTme = System.currentTimeMillis();
         System.out.println("耗时:" + (endTme - startTme));
         return timeTme + "";
+    }
+
+    @RequestMapping(value = "",method = RequestMethod.POST)
+    public void save(){
+        this.cacheService.save();
+    }
+
+    @RequestMapping(value = "",method = RequestMethod.DELETE)
+    public void delete(){
+        this.cacheService.delete();
     }
 }

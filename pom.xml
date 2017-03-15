@@ -92,6 +92,16 @@
 			<artifactId>druid</artifactId>
 			<version>1.0.5</version>
 		</dependency>
+		<!--ehcache的依赖-->
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache</artifactId>
+		</dependency>
+		<dependency>
+			<!--java mail的依赖-->
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
