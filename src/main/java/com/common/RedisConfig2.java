@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.CacheManager;
+import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.interceptor.KeyGenerator;
 import org.springframework.context.annotation.Bean;
@@ -28,9 +29,10 @@ import java.lang.reflect.Method;
 @Configuration
 @EnableCaching
 @PropertySource("classpath:config/redis.properties")
-public class RedisConfig2 {
+public class RedisConfig2 extends CachingConfigurerSupport{
 
     @Bean
+    @Override
     public KeyGenerator keyGenerator(){
         return new KeyGenerator() {
             @Override
