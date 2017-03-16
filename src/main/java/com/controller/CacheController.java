@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Created by zhuzhengping on 2017/3/15.
+ * 使用自带的cache，在项目关闭后cache 清空
  */
 @RestController
 @RequestMapping(value = "/concurrenmapcache/cache")

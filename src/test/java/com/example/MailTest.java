@@ -10,6 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  * Created by zhuzhengping on 2017/3/16.
+ * mail test
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
