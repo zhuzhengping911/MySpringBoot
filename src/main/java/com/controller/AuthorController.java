@@ -3,9 +3,11 @@ package com.controller;
 import com.compont.Author;
 import com.service.AuthorService_jdbc;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +46,10 @@ public class AuthorController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public void add(@RequestBody Map<String,Object> request){
+    public void add(@Valid @RequestBody Map<String,Object> request, BindingResult bindingResult){
+        if(bindingResult.hasErrors()){
+            System.out.println(bindingResult.getFieldError().getDefaultMessage());
+        }
         String userId = (String) request.get("user_id");
         String realName = (String) request.get("real_name");
         String nickName = (String) request.get("nick_name");

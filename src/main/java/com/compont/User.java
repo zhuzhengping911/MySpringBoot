@@ -5,6 +5,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Min;
 import java.io.Serializable;
 
 /**
@@ -23,6 +24,7 @@ public class User implements Serializable {
     @Column(nullable = false,unique = true,name = "user_name")
     private String userName;
     @Column(nullable = false,unique = true,name = "pwd")
+    @Min(value = 12,message = "123")
     private String passWord;
     @Column(nullable = false,unique = true,name = "e_mail")
     private String email;
