@@ -15,6 +15,9 @@ logging:
 #mybatis:
 #  type-aliases-package: com.compont
 spring:
+  devtools:
+    restart:
+      additional-paths: Additional paths to watch for changes
   datasource:
     one:
       url: jdbc:mysql://localhost:3306/blog
