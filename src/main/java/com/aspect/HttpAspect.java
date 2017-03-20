@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * Created by zhuzhengping on 2017/3/19.
+ * aop切面，对每一个请求做记录
  */
 @Aspect
 @Component
