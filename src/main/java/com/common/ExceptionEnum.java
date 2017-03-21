@@ -2,6 +2,8 @@ package com.common;
 
 /**
  * Created by zhuzhengping on 2017/3/21.
+ * 异常枚举
+ * 便于维护
  */
 public enum ExceptionEnum {
     UNKONW_ERROR(-1,"未知错误"),

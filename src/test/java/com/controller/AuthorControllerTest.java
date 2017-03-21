@@ -12,6 +12,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 /**
  * Created by zhuzhengping on 2017/3/21.
+ * api单元测试，可测试具体url地址
  */
 
 @RunWith(SpringRunner.class)

@@ -2,6 +2,7 @@ package com.compont;
 
 /**
  * Created by zhuzhengping on 2017/3/21.
+ * 结果实体类，使用泛型
  */
 public class Result<T> {
 

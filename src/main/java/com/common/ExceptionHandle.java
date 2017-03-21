@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * Created by zhuzhengping on 2017/3/21.
+ * 异常记录
+ * 便于在log中寻找
  */
 
 @ControllerAdvice

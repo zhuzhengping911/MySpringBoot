@@ -2,6 +2,8 @@ package com.common;
 
 /**
  * Created by zhuzhengping on 2017/3/21.
+ * 自定义的异常类
+ * 添加一场代码code
  */
 public class BootException extends RuntimeException {
 

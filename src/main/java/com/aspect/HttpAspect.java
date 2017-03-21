@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * Created by zhuzhengping on 2017/3/19.
- * aop切面，对每一个请求做记录
+ * aop切面，对每一个在controller请求之前做记录
  */
 @Aspect
 @Component
@@ -20,11 +20,11 @@ public class HttpAspect {
 
     private final static Logger LOGGER = LoggerFactory.getLogger(HttpAspect.class);
 
-    @Pointcut("execution(public * com.controller.*.*(..))")
+    @Pointcut("execution(public * com.controller.*.*(..))")//切面所切的位置
     public void log(){
     }
 
-    @Before("log()")
+    @Before("log()")//请求之前
     public void before(JoinPoint joinPoint){
 //        System.out.println("this is the aspect before every requset!!!!");
         LOGGER.info("this is the aspect before every requset!!!!");
@@ -44,12 +44,12 @@ public class HttpAspect {
         LOGGER.info("args={}",joinPoint.getArgs());
     }
 
-    @After("log()")
+    @After("log()")//请求之后
     public void after(){
         LOGGER.info("this is the aspect after every response!!!");
     }
 
-    @AfterReturning(pointcut = "log()",returning = "object")
+    @AfterReturning(pointcut = "log()",returning = "object")//打印输出结果
     public void doAfterReturing(Object object){
         LOGGER.info("response={}",object);
     }

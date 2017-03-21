@@ -5,6 +5,7 @@ import com.compont.Result;
 /**
  * Created by zhuzhengping on 2017/3/21.
  * resultutil to form the result
+ * 结果封装，统一输出结果以及异常
  */
 public class ResultUtil {
 
