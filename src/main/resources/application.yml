@@ -68,9 +68,17 @@ spring:
     username: guest
     password: guest
   mail:
-    host: smpt.163.com
-    username:
-    password:
-    port: 25
-    protocol: smtp
+    host: smtp.qq.com
+    username: 407993723@qq.com
+    password: 
+#    port: 25
+#    protocol: smtp
     default-encoding: utf-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
