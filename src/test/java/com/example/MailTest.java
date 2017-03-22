@@ -8,6 +8,11 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import java.util.Properties;
+
 /**
  * Created by zhuzhengping on 2017/3/16.
  * mail test
@@ -31,5 +36,28 @@ public class MailTest {
         mailSender.send(simpleMailMessage);
 
         System.out.println("mail has been send");
+    }
+    @Test
+    public void sendMail() throws MessagingException {
+        Properties properties = new Properties();
+        Session session = Session.getInstance(properties, new Authenticator() {
+            @Override
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication("zhu_zhengping@hotmail.com","");
+
+
+            }
+        });
+
+        Message message = new MimeMessage(session);
+        message.setFrom(new InternetAddress("zhu_zhengping@hotmail.com"));
+
+        message.setRecipient(Message.RecipientType.TO,new InternetAddress("407993723@qq.com"));
+
+        message.setSubject("123");
+
+        message.setContent("<h1>123:</h1><h3><a href='http://www.google.com'></h3>","text/html;charset=utf-8");
+
+        Transport.send(message);
     }
 }
