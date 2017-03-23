@@ -28,6 +28,9 @@ public class MailTest {
     @Autowired
     private JavaMailSenderImpl mailSender;
 
+    /**
+     * 发送普通邮件（文本）
+     */
     @Test
     public void send(){
         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
@@ -40,6 +43,11 @@ public class MailTest {
 
         System.out.println("mail has been send");
     }
+
+    /**
+     * 发送html的电子邮件
+     * @throws MessagingException
+     */
     @Test
     public void sendHtmlMail() throws MessagingException {
         MimeMessage mimeMessage = mailSender.createMimeMessage();
@@ -60,7 +68,10 @@ public class MailTest {
         System.out.println("mail has been send");
     }
 
-
+    /**
+     * 发送含有图片的电子邮件
+     * @throws MessagingException
+     */
     @Test
     public void sendAttachedImageMail() throws MessagingException {
         MimeMessage mimeMessage = mailSender.createMimeMessage();
@@ -85,6 +96,10 @@ public class MailTest {
         System.out.println("mail has been send");
     }
 
+    /**
+     * 发送含有附件的电子邮件
+     * @throws MessagingException
+     */
     @Test
     public void sendAttendedFileMail() throws MessagingException {
         MimeMessage mimeMessage = mailSender.createMimeMessage();
@@ -108,6 +123,11 @@ public class MailTest {
         System.out.println("mail has been send");
 
     }
+
+    /**
+     * 普通发送的方法，通用
+     * @throws MessagingException
+     */
     @Test
     public void sendMail() throws MessagingException {
         Properties properties = new Properties();
