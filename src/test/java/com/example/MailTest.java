@@ -60,6 +60,7 @@ public class MailTest {
         System.out.println("mail has been send");
     }
 
+
     @Test
     public void sendAttachedImageMail() throws MessagingException {
         MimeMessage mimeMessage = mailSender.createMimeMessage();
@@ -82,6 +83,30 @@ public class MailTest {
         mailSender.send(mimeMessage);
 
         System.out.println("mail has been send");
+    }
+
+    @Test
+    public void sendAttendedFileMail() throws MessagingException {
+        MimeMessage mimeMessage = mailSender.createMimeMessage();
+        MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage,true,"utf-8");
+        mimeMessageHelper.setTo("zhu_zhengping@hotmail.com");
+        mimeMessageHelper.setFrom("407993723@qq.com");
+        mimeMessageHelper.setSubject("mail test【AttendedFile】");
+
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("<html><head></head>");
+        stringBuilder.append("<body><h1>spring mail test</h1><p>hello ,this is mail test</p></body>");
+        stringBuilder.append("</html>");
+        //启用html
+        mimeMessageHelper.setText(stringBuilder.toString(),true);
+
+        FileSystemResource img = new FileSystemResource(new File("/Users/zhuzhengping/Downloads/IMG_5067.PNG"));
+        mimeMessageHelper.addAttachment("image.jpg",img);
+        //发送邮件
+        mailSender.send(mimeMessage);
+
+        System.out.println("mail has been send");
+
     }
     @Test
     public void sendMail() throws MessagingException {
