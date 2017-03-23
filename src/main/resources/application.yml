@@ -70,7 +70,7 @@ spring:
   mail:
     host: smtp.qq.com
     username: 407993723@qq.com
-    password: 
+    password:
 #    port: 25
 #    protocol: smtp
     default-encoding: utf-8
@@ -81,4 +81,15 @@ spring:
           starttls:
             enable: true
             required: true
-
+info:
+  author:
+    realname: zzp
+    nickname: zhengping.zhu
+    email: zhu_zhengping@hotmail.com
+    blog:
+endpoints:
+  shutdown:
+    enabled: true
+management:
+  context-path: /manage
+  port: 9090 #-1代表关闭
