@@ -92,4 +92,5 @@ endpoints:
     enabled: true
 management:
   context-path: /manage
-  port: 9090 #-1代表关闭
+  port: 9090   #-1代表关闭
+  address: 127.0.0.1
