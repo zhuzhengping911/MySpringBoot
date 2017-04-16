@@ -4,25 +4,25 @@ import com.compont.User;
 import com.compont.ZzpProperties;
 import com.dao.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpSession;
+import java.util.Date;
+import java.util.Map;
 import java.util.UUID;
 
 /**
  * Created by zhuzhengping on 2017/2/1.
  * 第一个helloworld类
  */
-@SpringBootApplication
-@RestController //注解-该类返回的都是json格式
+@Controller("template.freemarkerController") //注解-该类返回的都是json格式
 public class HelloWordController {
 
     @Autowired
@@ -30,9 +30,12 @@ public class HelloWordController {
     @Autowired
     private UserRepository userRepository;
 
-    @RequestMapping(value = "/hello",method = RequestMethod.GET)
-    public String HelloWorld(){
-        return "HelloWorld,SpringBoot!!!";
+    @RequestMapping(value = "/template/freemarker/welcome")
+    public String HelloWorld(Map<String,Object> map){
+
+        map.put("time",new Date());
+        map.put("message","zzp");
+        return "welcome";
     }
 
 
