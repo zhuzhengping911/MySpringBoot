@@ -17,7 +17,7 @@ import java.util.List;
 @Mapper
 public interface AuthorMapper_mybatis {
 
-    @Insert("NSERT INTO tp_author(real_name,nick_name) VALUES (#{real_name},#{nick_name})")
+    @Insert("INSERT INTO tp_author(real_name,nick_name) VALUES (#{real_name},#{nick_name})")
     int add(@Param("realName") String realName,@Param("nick_name") String nickName);
 
     @Update("UPDATE tp_author SET real_name = #{real_name},nick_name = #{nick_name} WHERE id = #{id}")
