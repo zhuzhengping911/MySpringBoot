@@ -32,16 +32,18 @@ public class MailTest {
      * 发送普通邮件（文本）
      */
     @Test
-    public void send(){
-        SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
-        simpleMailMessage.setTo(new String[]{"zhu_zhengping@hotmail.com"});
-        simpleMailMessage.setFrom("407993723@qq.com");
-        simpleMailMessage.setSubject("spring boot mail [text]");
-        simpleMailMessage.setText(" this is an simple text ");
+    public void send() {
+        for (int i = 0; i < 10; i++) {
+            SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
+            simpleMailMessage.setTo(new String[]{"zhu_zhengping@hotmail.com"});
+            simpleMailMessage.setFrom("407993723@qq.com");
+            simpleMailMessage.setSubject("spring boot mail [text]");
+            simpleMailMessage.setText(" this is an simple text ");
 
-        mailSender.send(simpleMailMessage);
+            mailSender.send(simpleMailMessage);
 
-        System.out.println("mail has been send");
+            System.out.println("mail has been send");
+        }
     }
 
     /**
