@@ -13,7 +13,7 @@ import javax.sql.DataSource;
 
 /**
  * Created by zhuzhengping on 2017/3/7.
- *JDBC链接数据库
+ * JDBC链接数据库
  */
 @Configuration
 @EnableTransactionManagement
