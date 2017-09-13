@@ -70,7 +70,7 @@ spring:
   mail:
     host: smtp.qq.com
     username: 407993723@qq.com
-    password:
+    password: EloveGZ0120
 #    port: 25
 #    protocol: smtp
     default-encoding: utf-8
